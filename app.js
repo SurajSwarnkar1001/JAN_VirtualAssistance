@@ -9,33 +9,29 @@ function speak(sentence) {
 
     window.speechSynthesis.speak(text_speak);
 }
-
 function wishMe() {
     var day = new Date();
     var hr = day.getHours();
 
     if(hr >= 0 && hr < 12) {
-        speak("Good Morning Boss");
+        speak("Good Morning sir");
     }
-
+        
     else if(hr == 12) {
-        speak("Good noon Boss");
+        speak("Good noon sir");
     }
 
     else if(hr > 12 && hr <= 17) {
-        speak("Good Afternoon Boss");
+        speak("Good Afternoon sir");
     }
-
     else {
-        speak("Good Evening Boss");
+        speak("Good Evening sir");
     }
 }
 
 window.addEventListener('load', ()=>{
-    speak("Activating the program jan 2.0");
+    speak("Activating the program JAN two point zero");
     speak("I'm your Virtual Personal Assistant:")
-    speak("Going online");
-    // wishMe();
 })
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -54,16 +50,21 @@ btn.addEventListener('click', ()=>{
 
 function speakThis(message) {
     const speech = new SpeechSynthesisUtterance();
-
-    speech.text = "I did not understand what you said please try again";
-
-    if(message.includes('hey') || message.includes('hello')) {
-        const finalText = "Hello Boss";
+    if(message.includes('wake up')){
+    wishMe();
+    const finalText = "Please tell me sir, How can I help you ?";
+    speech.text = finalText;
+    }
+        
+    else if(message.includes('hey') || message.includes('hello')) {
+        const finalText = "Hello sir, how are you";
         speech.text = finalText;
     }
-
+    else if(message.includes('i am fine')){
+        speak("that's great sir");
+    }
     else if(message.includes('how are you')) {
-        const finalText = "I am fine boss tell me how can i help you";
+        const finalText = "I am fine, tell me how can i help you";
         speech.text = finalText;
     }
 
@@ -108,8 +109,8 @@ function speakThis(message) {
         speech.text = finalText;
     }
 
-    else if(message.includes('calculator')) {
-        window.open('Calculator:///')
+    else if(message.includes('open calculator')) {
+        window.open('https://calculator.apps.chrome/')
         const finalText = "Opening Calculator";
         speech.text = finalText;
     }
@@ -119,7 +120,7 @@ function speakThis(message) {
         const finalText = "I found some information for " + message + " on google";
         speech.text = finalText;
     }
-
+    
     speech.volume = 1;
     speech.pitch = 1;
     speech.rate = 1;
