@@ -11,7 +11,8 @@
   min-height: 100vh;
   position: relative;
   width: 100%;
-  background: #000;
+/*   background: #000; */
+   background-color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +24,7 @@
 }
 
 .main .image-container .image {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +72,7 @@
 }
 
 .main .input .talk i {
-  font-size: 20px;
+  font-size: 30px;
   color: #aed0d0;
 }
 
