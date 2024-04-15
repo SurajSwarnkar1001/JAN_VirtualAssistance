@@ -63,7 +63,7 @@ function speakThis(message) {
     else if(message.includes('i am fine')){
         speak("that's great sir");
     }
-    else if(message.includes('how are you')) {
+    else if(message.includes('and how are you')) {
         const finalText = "I am fine, tell me how can i help you";
         speech.text = finalText;
     }
