@@ -84,6 +84,11 @@ function speakThis(message) {
         const finalText = "Opening instagram";
         speech.text = finalText;
     }
+    else if(message.includes('open Linkedin')) {
+        window.open("https://www.linkedin.com", "_blank");
+        const finalText = "Opening Linkedin";
+        speech.text = finalText;
+    }
 
     else if(message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
