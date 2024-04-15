@@ -33,7 +33,7 @@ function wishMe() {
 
 window.addEventListener('load', ()=>{
     speak("Activating the program jan 2.0");
-    speak("I'm a Virtual Personal Assistant:")
+    speak("I'm your Virtual Personal Assistant:")
     speak("Going online");
     // wishMe();
 })
