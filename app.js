@@ -72,7 +72,10 @@ function speakThis(message) {
         const finalText = "My name is JAN, I'm your Personal Assistant";
         speech.text = finalText;
     }
-
+   else if(message.includes('your inventor')){
+        const finalText = "I was created by Mr. Suraj Swarnkar";
+        speech.text = finalText;
+    }
     else if(message.includes('open google')) {
         window.open("https://google.com", "_blank");
         const finalText = "Opening Google";
