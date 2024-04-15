@@ -108,7 +108,7 @@ function speakThis(message) {
         speech.text = finalText;
     }
 
-    else if(message.includes('calculate')) {
+    else if(message.includes('calculator')) {
         window.open('Calculator:///')
         const finalText = "Opening Calculator";
         speech.text = finalText;
